@@ -5,8 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link re="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
 
   <title>Frontend Mentor | Equalizer landing page</title>
 </head>
@@ -14,7 +18,7 @@
 <body>
   <main class="grid-content">
 
-    <section>
+    <section class="header">
       <header>
         <img src="./assets/logo.svg" alt="equalizer logo">
         <h1>We make your music sound extraordinary.</h1>
@@ -25,23 +29,33 @@
       </header>
     </section>
 
+    <section class="app-photo">
+      <div class="app-container">
+        <img src="./assets/illustration-app.png" alt="mock photo of phone application">
+      </div>
+    </section>
+
     <section class="premium">
       <h1>Premium EQ</h1>
 
-      <p>Get expert-level control with a robust equalizer, volume mixer, and spatial audio. Take
+      <p class="premium-desc">Get expert-level control with a robust equalizer, volume mixer, and spatial audio. Take
         your listening experience to a whole new level and access all our incredible features!</p>
 
-      <p><span class="price">$4</span> / month</p>
+      <p class="premium-price"><span class="price">$4</span> / month</p>
 
-      <button>iOS Download</button>
-      <button>Android Download</button>
+      <button id="iOS"><span class="button"><img src="./assets/icon-apple.svg" alt="apple icon"> iOS
+          Download</span></button>
+      <button id="Android"><span class="button"><img src="./assets/icon-android.svg" alt="android icon"> Android
+          Download</span></button>
     </section>
 
-    <section>
+    <section class="footer">
       <footer>
         <img src="./assets/logo.svg" alt="equalizer logo">
         <p>All rights reserved © Equalizer 2021</p>
-        <p>Have any problems? Contact us via social media or email us at equalizer@example.com</p>
+        <p>Have any problems? Contact us via social media or email us at
+        <p class="email">equalizer@example.com</p>
+        </p>
       </footer>
     </section>
 
