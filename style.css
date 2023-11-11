@@ -3,6 +3,8 @@
     --premium-bg: #FA7453;
     --dark-font: #191826;
     --light-font: #FCFAF9;
+    --hover-green: #66E2DC;
+    --hover-orange: #FFB964;
 }
 
 html {
@@ -76,11 +78,16 @@ header>p {
     color: var(--dark-font);
 }
 
+.app-premium {
+    padding: 0;
+}
+
 .app-photo {
+    border-radius: .75rem;
     background: url("./assets/bg-pattern-2.svg");
+    background-color: var(--app-bg);
     background-repeat: no-repeat;
     background-position: center;
-    background-color: var(--app-bg);
 }
 
 .app-container {
@@ -95,9 +102,10 @@ header>p {
 /* Premium card styling */
 
 .premium {
+    border-radius: .75rem;
     background-color: var(--premium-bg);
     position: relative;
-    transform: translateY(-10%);
+    transform: translateY(-4%);
 }
 
 .premium>h1 {
@@ -138,10 +146,18 @@ button#iOS {
     color: var(--light-font);
 }
 
+button#iOS:hover {
+    background-color: var(--hover-green);
+}
+
 button#Android {
     background-color: var(--light-font);
     color: var(--dark-font);
     margin-bottom: 3rem;
+}
+
+button#Android:hover {
+    background-color: var(--hover-orange);
 }
 
 span.button {
@@ -170,5 +186,5 @@ p.email {
 .logos {
     display: flex;
     gap: 1rem;
-    padding: 2.5rem 1.5rem 4rem 1.5rem;
+    padding-left: 0;
 }
