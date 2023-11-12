@@ -100,6 +100,7 @@ header>p {
 
 .app-container {
     width: 13rem;
+    width: clamp(13rem, 11.41549295774648rem + 6.760563380281689vw, 17.5rem);
     margin: 0 auto;
 }
 
@@ -114,6 +115,10 @@ header>p {
     background-color: var(--premium-bg);
     position: relative;
     transform: translateY(-4%);
+    height: 34.125rem;
+    height: clamp(34.125rem, 32.38644366197183rem + 7.417840375586854vw, 39.0625rem);
+    /* width: 23.4375rem;
+    width: clamp(23.4375rem, 21.875rem + 6.666666666666667vw, 27.875rem); */
 }
 
 .premium>h1 {
@@ -197,9 +202,10 @@ p.email {
     padding-left: 0;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
     section.header {
         background-image: url("./assets/bg-main-tablet.png");
+        padding: 2.2rem;
         /* background-position: top right; */
         background-repeat: no-repeat;
         background-size: 175%;
@@ -215,17 +221,69 @@ p.email {
     }
 
     .app-premium {
+        height: 37.5rem;
+        margin: 0 2.2rem;
+        border-radius: .75rem;
         background-color: var(--app-bg);
-        /* height: 37.5rem; */
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
         position: relative;
     }
 
+    .app-photo {
+        grid-column: 1 / span 12;
+        grid-row: 1 / span 8;
+        background-position-y: -3rem;
+    }
+
     .app-container {
-        margin: 0 90% 0 10%;
+        margin: 0 83% 0 13%;
     }
 
     .premium {
-        width: 400px;
         transform: none;
+        position: relative;
+        transform: translate(-1rem, 2rem);
+        width: 24.9375rem;
+        grid-row: 5 / span 6;
+        grid-column: 9 / span 3;
+    }
+
+    section.footer {
+        padding: 2.2rem;
+        padding-top: 9rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    main {
+        background-image: url("./assets/bg-main-desktop.png");
+        background-size: cover;
+    }
+
+    section.header {
+        padding-left: 10rem;
+        padding-top: 3rem;
+        background-image: none;
+    }
+
+    header>p {
+        width: 51.5625rem;
+    }
+
+    .app-premium {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+
+    .premium {
+        transform: none;
+        grid-row: 2 / span 10;
+        grid-column: 10 / span 2;
+    }
+
+    section.footer {
+        padding-left: 10rem;
+        padding-right: 10rem;
     }
 }
