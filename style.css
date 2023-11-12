@@ -302,4 +302,9 @@ p.email {
         padding-left: 10rem;
         padding-right: 10rem;
     }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
 }
